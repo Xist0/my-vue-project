@@ -1,11 +1,11 @@
 <template>
   <div class="app-main-layout">
     
-    <Navbar/>
+    <NaviBar @click="isOpen = !isOpen" />
 
-    <Sidebar/>
+    <SidBar v-model="isOpen" />
     
-    <main class="app-content" >
+    <main class="app-content" :class="{full: !isOpen}">
       <div class="app-page">
         <router-view />
       </div>
@@ -19,17 +19,15 @@
   </div>
 </template>
 
-
 <script>
-import Navbar from "@/components/app/NavBar";
-import Sidebar from "@/components/app/SideBar";
+import NaviBar from "@/components/app/NaviBar";
+import SidBar from "@/components/app/SidBar";
 
 export default {
   name: "main-layout",
   components: {
-    Navbar,
-    Sidebar,
+    NaviBar,
+    SidBar,
   },
 };
 </script>
-
