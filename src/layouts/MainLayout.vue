@@ -5,7 +5,7 @@
 
     <SidBar v-model="isOpen" />
     
-    <main class="app-content" :class="{full: !isOpen}">
+    <main class="app-content" >
       <div class="app-page">
         <router-view />
       </div>
@@ -25,6 +25,9 @@ import SidBar from "@/components/app/SidBar";
 
 export default {
   name: "main-layout",
+  data: () => ({
+    isOpen: true
+  }),
   components: {
     NaviBar,
     SidBar,

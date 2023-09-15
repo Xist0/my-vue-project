@@ -71,9 +71,9 @@ export default {
   },
   methods: {
     logout() {
-      console.log('Logout');
-      this.$router.push('/login?message=logout');
-    },
+      console.log('Logout')
+      this.$router.push('/login?message=logout')
+    }
   },
   mounted() {
     this.interval = setInterval(() => {

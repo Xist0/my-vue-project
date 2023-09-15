@@ -5,6 +5,7 @@ import dateFilter from '@/filters/date.filter';
 import './registerServiceWorker';
 import 'materialize-css/dist/js/materialize.min';
 
+
 const app = createApp(App);
 
 app.config.productionTip = false;
