@@ -1,5 +1,5 @@
 <template>
-  <div class="grey darken-1 empty-layout">
+  
     <form class="card auth-card">
       <div class="card-content">
         <span class="card-title">Домашняя бухгалтерия</span>
@@ -38,10 +38,10 @@
 
         <p class="center">
           Уже есть аккаунт?
-          <a href="/">Войти!</a>
+          <router-link to="/login">Войти!</router-link>
         </p>
       </div>
     </form>
-  </div>
+
 </template>
 

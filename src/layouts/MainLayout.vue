@@ -1,11 +1,11 @@
 <template>
   <div class="app-main-layout">
     
-    <NaviBar @click="isOpen = !isOpen" />
+    <NaviBar />
 
-    <SidBar v-model="isOpen" />
+    <SidBar  />
     
-    <main class="app-content" >
+    <main class="app-content full" >
       <div class="app-page">
         <router-view />
       </div>
