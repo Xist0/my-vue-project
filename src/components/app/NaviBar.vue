@@ -54,26 +54,17 @@ export default {
   computed: {
     formattedDate() {
       if (!this.date || isNaN(this.date.getTime())) {
-        return ''; // Если this.date недопустимая дата, вернуть пустую строку
+        return ''; 
       }
-
       const options = {};
-
       options.day = '2-digit';
       options.month = 'long';
       options.year = 'numeric';
       options.hour = '2-digit';
       options.minute = '2-digit';
       options.second = '2-digit';
-
       return new Intl.DateTimeFormat('ru-RU', options).format(this.date);
     },
-  },
-  methods: {
-    logout() {
-      console.log('Logout')
-      this.$router.push('/login?message=logout')
-    }
   },
   mounted() {
     this.interval = setInterval(() => {
@@ -90,6 +81,12 @@ export default {
     clearInterval(this.interval);
     if (this.dropdown && this.dropdown.destroy) {
       this.dropdown.destroy();
+    }
+  },
+  methods: {
+    logout() {
+      console.log('Logout')
+      this.$router.push('/login?message=logout')
     }
   },
 };

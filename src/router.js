@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 const routes = [
   {
     path: '/login',
-    name: 'Login', // Используйте строку в качестве имени компонента
+    name: 'Login', 
     meta: { layout: 'empty' },
     component: () => import('./views/LoginForm.vue')
   },
@@ -16,7 +16,7 @@ const routes = [
   },
   {
     path: '/categories',
-    name: 'Categories', // Используйте строку в качестве имени компонента
+    name: 'Categories', 
     meta: { layout: 'main' },
     component: () => import('./views/CategoriesComponent.vue')
   },
